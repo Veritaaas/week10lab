@@ -5,7 +5,7 @@ let movieRoute = require('./router/movieRoute');
 let actorRoute = require('./router/actorRoute');
 let app = express();
 let path = require('path');
-app.listen(8080);
+app.listen(8000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
