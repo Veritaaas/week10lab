@@ -141,5 +141,13 @@ module.exports = {
                 console.log(movie);
             })
         })
-    }
+    },
+    ListByYear: function (req, res) {
+        Movie.find({year:{$lte:req.params.year}},function(err,docs){
+            console.log(docs);
+            if (err) return res.status(400).json(err);
+            res.json(docs);
+        })
+    },
+
 };

@@ -57,3 +57,4 @@ app.get('/movies/movieByActname/:name',movieRoute.movNameInAct);
 
 //week10
 app.put('/movies/addActToMov/:name/:title',movieRoute.addAct);
+app.get('/movies/listMovByY/:year', movieRoute.ListByYear);

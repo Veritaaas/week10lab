@@ -14,6 +14,9 @@ import { ListmoviesComponent } from './listmovies/listmovies.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { AddactortomovieComponent } from './addactortomovie/addactortomovie.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ListmoviebyyearComponent } from './listmoviebyyear/listmoviebyyear.component';
+import { NewComponent } from './new/new.component';
 
 const appRoutes: Routes = [
   { path: "listactors", component: ListactorsComponent },
@@ -23,8 +26,10 @@ const appRoutes: Routes = [
   { path: "listmovies", component: ListmoviesComponent },
   { path: "addmovie", component: AddmovieComponent },
   { path: "addactortomovie", component: AddactortomovieComponent },
+  { path: "listmoviebyyear", component: ListmoviebyyearComponent },
   { path: "deletemovie", component: DeletemovieComponent },
   { path: "", redirectTo: "/listactors", pathMatch: "full" },
+  { path: "**", component: PagenotfoundComponent }
 ];
 @NgModule({
   declarations: [
@@ -36,7 +41,10 @@ const appRoutes: Routes = [
     ListmoviesComponent,
     AddmovieComponent,
     DeletemovieComponent,
-    AddactortomovieComponent
+    AddactortomovieComponent,
+    PagenotfoundComponent,
+    ListmoviebyyearComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule,RouterModule.forRoot(appRoutes,{useHash: true})

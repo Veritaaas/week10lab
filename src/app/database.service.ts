@@ -48,5 +48,9 @@ export class DatabaseService {
     let url = "/movies/addActToMov/" +name+"/"+title;
     return this.http.put(url,httpOptions);
   }
+  ListByY(){
+    let url ="/movies/listMovByY/"+2019;
+    return this.http.get(url,httpOptions);
+  }
   
 }
